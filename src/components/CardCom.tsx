@@ -18,41 +18,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Link } from "react-router-dom";
 
 export function CardCom(props) {
   return (
-    <Card className="w-[350px] border-4" style={{borderColor:'#31363F'}}>
+    <Card className="w-[350px] h-full border-4 overflow-hidden" style={{borderColor:'#31363F'}}>
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
+        <CardDescription>{props.techstack}</CardDescription>
       </CardHeader>
       <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+        
+          <div className="flex items-center gap-4 h-44">
+            {props.desc}
           </div>
-        </form>
+        
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button >Github <Github className="h-8 w-5 ml-2"></Github></Button>
-        <Button>Deploy</Button>
+      <Link to={props.link1}><Button>Github <Github className="h-8 w-5 ml-2"></Github></Button></Link>
+       <Link to={props.link2}> <Button className={props.border}>Deploy</Button></Link>
       </CardFooter>
     </Card>
   )
