@@ -1,8 +1,7 @@
-import React from 'react'
-import image from '../public/heyimage.gif';
+
+import image from "../../public/heyimage.gif";
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { Document, Page } from 'react-pdf';
-import { Link } from 'react-router-dom';
+
 
 export default function Home() {
   return (
