@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 const Home = lazy(() => import("./pages/Home"));
@@ -16,9 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import {
   HamburgerMenuIcon,
-  DotFilledIcon,
-  CheckIcon,
-  ChevronRightIcon,
+  
 } from '@radix-ui/react-icons';
 import {
   NavigationMenu,
@@ -52,7 +50,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Suspense fallback={<Skeleton className="h-[125px] w-[250px] rounded-xl" />}><Home /> </Suspense>} />
             <Route path="/projects" element={<Suspense fallback={<Skeleton className="h-[125px] w-[250px] rounded-xl" />}><Project /> </Suspense>} />
-            <Route path="/hire" element={<Suspense fallback={<Skeleton className="h-[125px] w-[250px] rounded-xl" />}><Hireme /> </Suspense>} />
+            <Route path="/hire" element={<Suspense fallback={<Skeleton className="h-[125px] w-[250px] rounded-xl" />}><Hireme  /> </Suspense>} />
           </Routes>
         </BrowserRouter>
       </div>
@@ -61,7 +59,7 @@ export default function App() {
   )
 }
 
-function Appbar({ isMobile }) {
+function Appbar({ isMobile }: { isMobile: boolean }) {
   const { theme, setTheme } = useTheme();
   if (!isMobile) {
     return (
