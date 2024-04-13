@@ -14,14 +14,14 @@ import { Link } from "react-router-dom";
 
 export function CardCom(props: { title: string, techstack: string, desc: string, link1: string, link2: string, border: string }) {
   return (
-    <Card className="w-[350px] h-full border-4 overflow-hidden" style={{borderColor:'#31363F'}}>
+    <Card className="w-[350px] border-4 overflow-hidden" style={{borderColor:'#31363F'}}>
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.techstack}</CardDescription>
       </CardHeader>
       <CardContent>
         
-          <div className="flex items-center gap-4 h-44">
+          <div className="flex items-center gap-4 md:h-44">
             {props.desc}
           </div>
         
