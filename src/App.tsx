@@ -32,7 +32,7 @@ import { Button } from "@/components/ui/button";
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed

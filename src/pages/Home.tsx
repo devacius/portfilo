@@ -1,5 +1,4 @@
 import { CardCom } from "@/components/CardCom";
-import image from "../../public/heyimage.gif";
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import {
   Carousel,
@@ -13,7 +12,7 @@ import { useTheme } from '../components/theme-provider';
 
 export default function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
-  const{theme,setTheme}=useTheme();
+  const{theme}=useTheme();
  const[value,setValue]=useState('bg-slate-200');
   useEffect(() => {
     const handleResize = () => {
@@ -29,10 +28,15 @@ export default function Home() {
 
   }, []);
   useEffect(() => {
-    
+    function themeChange(){
     if(theme==="dark"){
       setValue('bg-gray-400');
     }
+    else{
+      setValue('bg-slate-200');
+    }
+  }
+  themeChange();
   
   },[theme]);
 
