@@ -63,10 +63,10 @@ function Appbar({ isMobile }: { isMobile: boolean }) {
   const { theme, setTheme } = useTheme();
   if (!isMobile) {
     return (
-      <div className='flex absolute top-0 w-screen h-20 md:h-16' style={{ backgroundColor: '#76ABAE' }}>
+      <div className='flex absolute top-0 w-screen h-20 md:h-16' style={{ backgroundColor: '#14B8A6' }}>
         <div className='ml-auto md:w-1/3 flex justify-end' >
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className='px-4'>
               <NavigationMenuItem >
                 <Link to="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()} style={theme === 'dark' ? { backgroundColor: '#31363F' } : { backgroundColor: '#EEEEEE' }} >
@@ -85,7 +85,7 @@ function Appbar({ isMobile }: { isMobile: boolean }) {
               <NavigationMenuItem >
                 <Link to="/hire">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()} style={theme === 'dark' ? { backgroundColor: '#31363F' } : { backgroundColor: '#EEEEEE' }}>
-                    Hire me
+                    About
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -113,7 +113,7 @@ function Appbar({ isMobile }: { isMobile: boolean }) {
         )}
         else{
           return(
-            <div className='flex absolute top-0 w-screen h-18' style={{ backgroundColor: '#76ABAE' }}>
+            <div className='flex absolute top-0 w-screen h-18' style={{ backgroundColor: '#14B8A6' }}>
             <div className='ml-auto mr-2 w-14 my-2 flex justify-center items-center rounded border-2 border-black'>
           <DropdownMenu >
             <DropdownMenuTrigger> <HamburgerMenuIcon className='h-full w-10 font-bold' /></DropdownMenuTrigger>
@@ -121,7 +121,7 @@ function Appbar({ isMobile }: { isMobile: boolean }) {
               <DropdownMenuLabel><Link to="/">Home</Link></DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem ><Link to="/projects">Projects</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to="/hire">Hire Me</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to="/hire">About</Link></DropdownMenuItem>
               <DropdownMenuItem><Button className="h-full w-full " variant="outline" size="icon" onClick={() => {
                 console.log(theme);
                 if (theme === "dark") {
