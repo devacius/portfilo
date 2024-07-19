@@ -44,7 +44,7 @@ export default function App() {
   }, []);
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className='relative w-screen  h-screen flex flex-col justify-center items-center'>
+      <div className='relative w-screen  h-screen flex flex-col justify-center items-center space-y-5 '>
         <BrowserRouter>
           <Appbar isMobile={isMobile} />
           <Routes>
