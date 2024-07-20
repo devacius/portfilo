@@ -44,7 +44,7 @@ export default function App() {
   }, []);
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className='relative w-screen  h-screen flex flex-col justify-center items-center space-y-5 '>
+      <div className=' min-w-full  min-h-screen '>
         <BrowserRouter>
           <Appbar isMobile={isMobile} />
           <Routes>
@@ -63,7 +63,7 @@ function Appbar({ isMobile }: { isMobile: boolean }) {
   const { theme, setTheme } = useTheme();
   if (!isMobile) {
     return (
-      <div className='flex absolute top-0 w-screen h-20 md:h-16' style={{ backgroundColor: '#14B8A6' }}>
+      <div className='flex absolute top-0 min-w-full h-20 md:h-16' style={{ backgroundColor: '#14B8A6' }}>
         <div className='ml-auto md:w-1/3 flex justify-end' >
           <NavigationMenu>
             <NavigationMenuList className='px-4'>
