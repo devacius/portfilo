@@ -2,9 +2,7 @@
 import pdf from "../Deepansh_Gupta (1).pdf";
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Document, Page } from 'react-pdf';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
+
 export default function Hireme() {
   const [isMobile, setIsMobile] = useState(true);
 
@@ -27,10 +25,8 @@ export default function Hireme() {
 </a>
       <div className='h-18 w-50 justify-center items-center flex flex-col py-4'><p className='text-2xl font-bold '>My Resume</p> </div>
       <div className='flex flex-col justify-center items-center h-auto w-auto'>
-        {/* <iframe src={pdf} width="700px " height="950px" className='my-8'></iframe> */}
-        <Document file={pdf}>
-            <Page pageNumber={1} />
-        </Document>
+        <iframe src={pdf} width="700px " height="950px" className='my-8'></iframe>
+        
         
         </div>
     </div>
