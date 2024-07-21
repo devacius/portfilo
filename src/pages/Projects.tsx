@@ -3,7 +3,6 @@ import { CardCom } from '@/components/CardCom';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { useEffect, useState } from 'react';
 import projects from '@/assets/projectlist';
-import { Car } from 'lucide-react';
 export default function Projects() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
 
