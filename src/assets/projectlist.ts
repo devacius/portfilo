@@ -3,10 +3,10 @@ const projects = [
       id: 1,
       title: "Paytm App",
       link1: "https://github.com/devacius/paytm",
-      border: "border-red-500 border-4",
+      border: "border-green-500 border-4",
       techstack: "React | Tailwind CSS | Node.js | Prisma | JWT Authentication | PostgreSQL",
       desc: "A simple Paytm clone created using the MERN stack with virtual money provided upon signup. This project was created to learn about MongoDB, backend development, user authentication, and understanding HTTP server requests. (It is not linked to your bank account. No need to worry😅.)",
-      link2: "#"
+      link2: "https://paytm-teal.vercel.app/"
     },
     {
         id: 2,
